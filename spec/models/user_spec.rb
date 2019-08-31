@@ -82,7 +82,7 @@ describe User do
     end
 
     it "Can be registered if password is 6 characters or more" do
-      user = build(:user, password: "123456")
+      user = build(:user, password: "123456", password_confirmation: "123456")
       expect(user.valid?).to eq true
     end
 
